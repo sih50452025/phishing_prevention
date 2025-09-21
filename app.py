@@ -4,7 +4,15 @@ import pickle
 import numpy as np
 import re
 from urllib.parse import urlparse
+import os
+import pickle
+import subprocess
 
+MODEL_PATH="phishing.pkl"
+if not os.path.exists(MODEL_PATH):
+  subprocess.run(["python","model.py"],check=True)
+with open(MODEL_PATH,"rb") as f:
+  model=pickle.load(f)
 # ---------------- Trusted Domains ----------------
 TRUSTED_DOMAINS = [
     "google.com", "github.com", "microsoft.com", "apple.com",
