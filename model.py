@@ -7,15 +7,6 @@ import re
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 
-import os
-import pickle
-import subprocess
-
-MODEL_PATH="phishing.pkl"
-if not os.path.exists(MODEL_PATH):
-  subprocess.run(["python","model.py"],check=True)
-with open(MODEL_PATH,"rb") as f:
-  model=pickle.load(f)
 
 # Step 1: Load phishing URL dataset
 dataset_url = "https://raw.githubusercontent.com/GregaVrbancic/Phishing-Dataset/master/dataset_small.csv"
