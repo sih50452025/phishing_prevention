@@ -112,7 +112,7 @@ def index():
             # ---- Rule 1: Trusted domain override ----
             for trusted in TRUSTED_DOMAINS:
                 if host.endswith(trusted):
-                    result = f"Legitimate ✅ (trusted domain: {trusted})"
+                    result = f"safe ✅ (trusted domain: {trusted})"
                     score = 0.0
                     return render_template("index.html", result=result, score=score, url=url)
 
