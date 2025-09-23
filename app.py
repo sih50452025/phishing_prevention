@@ -15,7 +15,7 @@ with open(MODEL_PATH,"rb") as f:
   model=pickle.load(f)
 # ---------------- Trusted Domains ----------------
 TRUSTED_DOMAINS = [
-    "google.com", "github.com", "microsoft.com", "apple.com",
+    "google.com", "github.com","instagram.com" ,"microsoft.com", "apple.com",
     "facebook.com", "amazon.com", "wikipedia.org", "yahoo.com"
 ]
 
